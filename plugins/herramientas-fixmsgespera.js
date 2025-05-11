@@ -5,7 +5,7 @@ const handler = async (m, { conn, usedPrefix }) => {
 if (global.conn.user.jid !== conn.user.jid) {
 return conn.sendMessage(m.chat, {text: '*⚠️ Utiliza este comando directamente en el número principal del Bot*'}, {quoted: m})}
 const chatId = m.isGroup ? [m.chat, m.sender] : [m.sender];
-const sessionPath = './sessions'
+const sessionPath = './BotSession'
 try {
 const files = await fs.readdir(sessionPath);
 let filesDeleted = 0;
